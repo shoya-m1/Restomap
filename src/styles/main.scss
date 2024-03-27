@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@400;500;600;700&display=swap");
+
+$dark: rgb(94, 94, 94);
+$white: white;
+$primary: rgb(253, 160, 0);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:focus,
+a:focus,
+[tabindex="0"]:focus {
+  outline: 2px solid $primary !important;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $dark;
+  background-color: $white;
+}
+
+/* ======== navbar ========  */
+header nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 44px;
+  width: 100%;
+  justify-content: space-between;
+  transition: 0.3s all;
+  z-index: 99;
+  color: $white;
+}
+.logo {
+  position: relative;
+}
+.brand {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.skip-link {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  left: -190%;
+  background-color: $primary;
+  color: $white;
+  padding: 8px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
+  border: none;
+  outline: none;
+}
+
+.nav-light {
+  background-color: $white;
+  color: $primary;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
+}
+.nav-list {
+  list-style-type: none;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  display: none;
+}
+#checkbox2 {
+  display: none;
+}
+
+.toggle2 {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 45%;
+  height: 3px;
+  background-color: $dark;
+  border-radius: 6px;
+}
+
+#bar5 {
+  transition-duration: 0.8s;
+}
+
+#bar4,
+#bar6 {
+  width: 60%;
+}
+
+#checkbox2:checked + .toggle2 .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar5 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar4 {
+  width: 70%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar6 {
+  width: 70%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+.nav-list li {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list li a {
+  padding: 22px 0px;
+  text-decoration: none;
+  font-weight: 600;
+  color: $white;
+  transition: 0.3s all;
+}
+.nav-list li a:hover {
+  color: $primary !important;
+}
+.toggle {
+  border: none;
+  background: none;
+}
+/* ======== /navbar ========  */
+
+/* ======== jumbotron ========  */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../public/images/heros/hero-image_4.jpg");
+  background-color: rgba(0, 0, 0, 0.555);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.hero-inner {
+  position: sticky;
+  top: 15%;
+  padding-bottom: 40px;
+  width: 60%;
+}
+.hero-inner b {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: $white;
+  font-size: 30px;
+}
+
+.hero-inner h2 {
+  font-size: 50px;
+  color: $white;
+}
+.hero-inner p {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(245, 245, 245, 0.808);
+}
+/* ======== /jumbotron ========  */
+
+/* ======== main Content ========  */
+.content {
+  width: 100%;
+  padding: 100px 30px;
+  position: relative;
+  transition: 1s ease;
+}
+.content .shape {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+.content h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.content-inner ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* ======== /main Content ========  */
+
+/* ======== blog ========  */
+.blog {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0px 30px;
+}
+.blog > h4 {
+  text-align: center;
+  font-size: 25px;
+}
+.blog-inner {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.blog-inner li {
+  width: 350px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.129);
+  border-radius: 5px;
+  padding-bottom: 40px;
+}
+.blog-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.blog-content {
+  margin: 0px 18px;
+}
+.blog-content p:first-child {
+  font-size: 13px;
+  margin: 7px 0px;
+}
+.blog-content p:last-child {
+  font-size: 14px;
+  text-align: justify;
+  margin-top: 12px;
+}
+.blog-content a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 0px;
+  font-weight: 700;
+  color: $dark;
+  transition: 0.3s all;
+}
+.blog-content a:hover {
+  color: $primary;
+}
+/* ======== /blog ========  */
+
+/* ======== footer ========  */
+footer {
+  margin-top: 60px;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.485);
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  align-items: center;
+}
+/* ======== /footer ========  */
+
+@media screen and (max-width: 900px) {
+  nav {
+    color: $primary !important;
+    background-color: $white !important;
+  }
+
+  .menu {
+    display: block;
+  }
+  .nav-list {
+    position: absolute;
+    right: -100%;
+    top: 80px;
+    width: 250px;
+    padding: 30px 0px;
+    justify-content: right;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    transition: 0.7s all;
+    background-color: $white;
+  }
+  .menu-view {
+    right: 0;
+    transition: 0.7s all;
+  }
+  .nav-item a {
+    color: $dark !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    padding: 40px 30px !important;
+  }
+  .hero-inner {
+    width: 80%;
+  }
+  .hero-inner b {
+    font-size: 18px;
+  }
+  .hero-inner h2 {
+    font-size: 30px;
+  }
+  .hero-inner p {
+    font-size: 11px;
+  }
+  .blog {
+    padding: 20px;
+  }
+}
