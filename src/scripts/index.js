@@ -3,6 +3,16 @@ import "./component/list-restorants.js";
 import "../styles/main.scss";
 import $ from "jquery";
 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".load");
+  setTimeout(() => {
+    loader.classList.add("loader-hiden");
+    $("header").css("display", "block");
+    $("main").css("display", "block");
+    $(".footer").css("display", "flex");
+  }, 2500);
+});
+
 function scroll(scroll) {
   if (scroll > 10) {
     $("nav").addClass("nav-light");
