@@ -10,6 +10,7 @@ window.addEventListener("load", () => {
     $("header").css("display", "block");
     $("main").css("display", "block");
     $(".footer").css("display", "flex");
+    $(".load").css("display", "none");
   }, 2500);
 });
 
