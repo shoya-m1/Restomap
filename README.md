@@ -2,26 +2,22 @@
 
 web ui submission dicoding katalog restoran 
 
-# Sumber:
-
-https://myanimelist.net
-
 # Installasi
 
 - Jalankan perintah di terminal
 
 ```sh
 # clone repo
-git clone https://github.com/shoya-m1/AnimeList.git
+git clone https://github.com/shoya-m1/Restomap.git
 
 # masuk folder
-cd AnimeList
+cd Restomap
 
 # install dependensi
 npm install
 
 # jalankan server
-npm run serve
+npm run start-dev
 ```
 
 - Demo Website https://restomap.vercel.app/
