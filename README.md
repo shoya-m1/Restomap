@@ -1,6 +1,10 @@
-# Restorant Mapping
+# Restaurant Mapping
 
-Web ui submission dicoding kelas expert katalog restoran 
+web ui submission dicoding katalog restoran 
+
+# Sumber:
+
+https://myanimelist.net
 
 # Installasi
 
@@ -11,12 +15,13 @@ Web ui submission dicoding kelas expert katalog restoran
 git clone https://github.com/shoya-m1/AnimeList.git
 
 # masuk folder
-cd Restomap
+cd AnimeList
 
 # install dependensi
 npm install
 
 # jalankan server
-npm run start-dev
+npm run serve
 ```
 
+- Demo Website https://restomap.vercel.app/
